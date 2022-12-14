@@ -35,6 +35,7 @@ The `manifest.xml` file found in the root directory is the core of the add-in. T
 - `PROVIDER_NAME`: The name of the company providing the add-in (could be your company).
 - `PROJECT_BASE_URL`: Url pointing to where your add-in app is hosted.
 - `JITSI_BASE_URL`: Base url to your Jitsi instance.
+- `SUPPORT_URL`: Support url to the add-in admin.
 
 ## **Installation and setup**
 
