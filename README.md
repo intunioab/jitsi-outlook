@@ -2,8 +2,6 @@
 
 This Outlook add-in adds a randomly generated Jitsi link to an appointment (while in the appointment creation window). It was built based on the Yeoman generator, as described in the this [guide](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/outlook-quickstart?tabs=yeomangenerator).
 
-> This project is not being actively worked on by its creators (other than regular updates). No new features will be added in the near future, but feel free to fork and work on your own adjustments.
-
 ![Example image of the generated Jitsi signature](screenshot.png "Example image of the generated Jitsi signature")
 
 ## **Configuration**
@@ -26,7 +24,7 @@ All of the properties listed below can also be added to enable/disable any extra
 | **Property**          | **Type** | **Description**                                                                   |
 | --------------------- | -------- | --------------------------------------------------------------------------------- |
 | `baseUrl`             | string   | Base url to your Jitsi instance.                                                  |
-| `additionalText`      | string   | This text will show up atthe bottom of the email signature.                       |
+| `additionalText`      | string   | This text will show up at the bottom of the email signature.                      |
 | `startWithAudioMuted` | boolean  | This forces the mic to be muted for every person entering the meeting.            |
 | `startWithVideoMuted` | boolean  | This forces the camera to be disabled for every person entering the meeting.      |
 | `disableInitialGUM`   | boolean  | Skips the initial permission check and configuration screen (GUM = getUserMedia). |
