@@ -65,6 +65,16 @@ The `manifest.xml` can be added as an add-in manually, through Outlooks add-in p
 
 When it has finished loading the add-in should be visible in the toolbar whenever you have the event organizer window open. I.e. when you are trying to organize and invite people to meeting.
 
+### **Running the development server locally**
+
+You can run and test the add-in code by running the following npm command:
+
+```
+npm run dev-server
+```
+
+This will start the local development server on port 3000. If the aforementioned `manifest.xml` variables have been set to your local machine you will be able to run the add-in locally.
+
 ### **Publishing the add-in**
 
 This project does not provide a hosting or publishing recommendation, this is entirely up to the individual(s) using it. Microsoft provides a comprehensive publishing guide and provides different options in the following [link](https://learn.microsoft.com/en-us/office/dev/add-ins/publish/publish).
