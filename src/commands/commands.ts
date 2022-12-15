@@ -1,6 +1,6 @@
 import configJson from "../../config.json";
 import getLocalizedStrings from "../localization";
-import Config from "../models/Config";
+import Config, { defaultMeetJitsiUrl } from "../models/Config";
 /*
  * Copyright (c) Microsoft Corporation. All rights reserved. Licensed under the MIT license.
  * See LICENSE in the project root for license information.
@@ -33,7 +33,7 @@ const getConfigUrl = (config: Config) => {
 };
 
 const getJitsiLinkDOM = (config: Config): string => {
-  const jitsiUrl = config.baseUrl + getRandomRoomName() + getConfigUrl(config);
+  const jitsiUrl = (config.baseUrl ?? defaultMeetJitsiUrl) + getRandomRoomName() + getConfigUrl(config);
   const localizedStrings = getLocalizedStrings();
 
   return `

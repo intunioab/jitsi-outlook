@@ -1,5 +1,7 @@
+export const defaultMeetJitsiUrl = "https://meet.jit.si///";
+
 interface Config {
-  baseUrl: string;
+  baseUrl?: string;
   additionalText?: string;
   meetingUrl?: {
     startWithAudioMuted?: boolean;

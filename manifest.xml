@@ -12,9 +12,6 @@
   <IconUrl DefaultValue="{PROJECT_BASE_URL}/assets/icon-64.png"/> 
   <HighResolutionIconUrl DefaultValue="{PROJECT_BASE_URL}/assets/logo-filled.png"/>
   <SupportUrl DefaultValue="{SUPPORT_URL}"/>
-  <AppDomains>
-    <AppDomain>{JITSI_BASE_URL}</AppDomain>
-  </AppDomains>
   <Hosts>
     <Host Name="Mailbox"/>
   </Hosts>

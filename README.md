@@ -4,29 +4,34 @@ This Outlook add-in adds a randomly generated Jitsi link to an appointment (whil
 
 > This project is not being actively worked on by its creators (other than regular updates). No new features will be added in the near future, but feel free to fork and work on your own adjustments.
 
+![Example image of the generated Jitsi signature](screenshot.png "Example image of the generated Jitsi signature")
+
 ## **Configuration**
 
 This section describes how the add-in should and can be configured.
 
 ### `config.json`
 
-The add-in needs a configuration file (named `config.json` placed in the root directory) with the following required property:
+The add-in can be configured through the use of a configuration file (named `config.json`), that should be placed in the root directory. The following is an example of how the configuration file could look like:
 
 ```
 {
-    "baseUrl": "YOUR_JITSI_BASE_URL",
+    "baseUrl": "https://my-jitsi-instance-url",
+    "additionalText": "Some additional text beneath the signature",
 }
 ```
 
 All of the properties listed below can also be added to enable/disable any extra features.
 
-| **Property**          | **Type** | **Description**                                                              | **Required** |
-| --------------------- | -------- | ---------------------------------------------------------------------------- | ------------ |
-| `baseUrl`             | string   | Base url to your Jitsi instance.                                             | Yes          |
-| `additionalText`      | string   | This text will show up atthe bottom of the email signature.                  | No           |
-| `startWithAudioMuted` | boolean  | This forces the mic to be muted for every person entering the meeting.       | No           |
-| `startWithVideoMuted` | boolean  | This forces the camera to be disabled for every person entering the meeting. | No           |
-| `disableInitialGUM`   | boolean  | Skips the initial permission check and configuration screen.                 | No           |
+| **Property**          | **Type** | **Description**                                                                   |
+| --------------------- | -------- | --------------------------------------------------------------------------------- |
+| `baseUrl`             | string   | Base url to your Jitsi instance.                                                  |
+| `additionalText`      | string   | This text will show up atthe bottom of the email signature.                       |
+| `startWithAudioMuted` | boolean  | This forces the mic to be muted for every person entering the meeting.            |
+| `startWithVideoMuted` | boolean  | This forces the camera to be disabled for every person entering the meeting.      |
+| `disableInitialGUM`   | boolean  | Skips the initial permission check and configuration screen (GUM = getUserMedia). |
+
+> Note that configuration is entirely optional and that Jitsi's default configuration will be used as a default if no configuration file is found in the project. The add-in will default to https://meet.jit.si if no configuration file is found.
 
 ### `manifest.xml`
 
@@ -34,7 +39,6 @@ The `manifest.xml` file found in the root directory is the core of the add-in. T
 
 - `PROVIDER_NAME`: The name of the company providing the add-in (could be your company).
 - `PROJECT_BASE_URL`: Url pointing to where your add-in app is hosted.
-- `JITSI_BASE_URL`: Base url to your Jitsi instance.
 - `SUPPORT_URL`: Support url to the add-in admin.
 
 ## **Installation and setup**
