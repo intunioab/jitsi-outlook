@@ -1,3 +1,8 @@
+> **NOTE:**
+>
+> This project has been archived due to a change in scope and direction. No more features will be implemented here.
+> Feel free to contact Konstantin Ay (konstantin.ay@intunio.se) if you have any questions regarding the code or this repository.
+
 # **Jitsi Outlook add-in**
 
 This Outlook add-in adds a randomly generated Jitsi link to an appointment (while in the appointment creation window). It was built based on the Yeoman generator, as described in the this [guide](https://learn.microsoft.com/en-us/office/dev/add-ins/quickstarts/outlook-quickstart?tabs=yeomangenerator).
